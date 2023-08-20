@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <!--Metadata Settings-->
+        <meta charset="utf-8"> <!--Mengatur 'charset' menggunakan jenis 'utf-8'-->
+        <meta author="majinworks"> <!--Mengatur 'author' atau penulis laman atas nama 'majinworks'-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Mengatur 'viewport' agar ukurannya selalu sesuai dengan device yang digunakan untuk melihat laman dengan 'initial-scale' 1:1 (tanpa zoom in)-->
+        <title>The Eco-Tourist Travelogue</title> <!--Mengatur judul laman yang tertera pada tab menjadi 'Eco-Tourism'-->
+        
+        <!--Links-->
+        <!--JavaScript-->
+        <script src="script.js" defer></script>
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <!--CSS Stylesheet-->
+        <link rel="stylesheet" href="styles.css">
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    </head>
+
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark">
+        <!--Brand Logo-->
+        <a href="#" class="navbar-brand mb-0 h1"> <!--"Margin bottom 0"-->
+            <img 
+            class="d-inline-block align-top" 
+            src="imgs/ecotourist-white.png" 
+            width="100px"
+            />          <!--Memuat logo pada Navbar-->
+        </a>
+        
+        <!--Memuat Button untuk Collapsible Navbar-->
+        <button 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarNav"
+        class="navbar-toggler"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span> <!--Menggunakan Icon Button 'Hamburger'-->
+        </button>
+
+        <!--Setting div untuk collapsible navbar-->
+        <div 
+        class="collapse navbar-collapse justify-content-end" 
+        id="navbarNav"> 
+            <ul class="navbar-nav">
+                <!--Top-->
+                <li class="nav-item active">
+                    <a class="nav-link active" aria-current="page" href="#">Top</a>
+                </li>
+                <!--Dropdown Item | Featured-->
+                <li class="nav-item">
+                    <div class="dropdown-container">
+                    <a 
+                    class="nav-link dropdown-toggle" 
+                    id="journalDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false" 
+                    >
+                    Featured
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#featured-gallery" class="dropdown-item">Featured Photos</a></li>
+                        <li><a href="#featured-story" class="dropdown-item">Featured Stories</a></li>
+                    </ul>
+                </div>
+                </li>
+                <!--MoreArticles-->
+                <li class="nav-item">
+                    <a class="nav-link" href="#storiesCardCarousel">More Articles</a>
+                </li>
+                <!--Contact-->
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <header>
+    <!--Carousel untuk Header-->
+    <div id="topCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-indicators"> <!--Indicator Slide Carousel-->
+            <button type="button" data-bs-target="#topCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#topCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#topCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <!--Container Carousel-->
+        <div class="carousel-inner">
+            <!--Slide 1-->
+            <div class="carousel-item active">
+                <img src="imgs/banner (1).jpg" class="d-flex flex-wrap align-items-center w-100">
+                <div class="carousel-caption d-block">
+                    <h5>Discover Nature.</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error voluptatibus aperiam consectetur obcaecati repellat in optio! Non nihil, reiciendis consequuntur doloribus minima, voluptate earum veniam dolorum iste, temporibus quo illo?</p>
+                    <a href="#" class="btn btn-lg btn-success">
+                        Search Destinations
+                    </a>
+                </div>
+            </div>
+            <!--Slide 2-->
+            <div class="carousel-item">
+                <img src="imgs/banner (2).jpg" class="d-flex flex-wrap align-items-center w-100">
+                <div class="carousel-caption d-block">
+                    <h5>Need time away from city life?</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam molestias porro autem tenetur nam fuga minus exercitationem! Sit nesciunt molestias minima. Vitae fuga delectus aliquid pariatur assumenda eos accusamus ad.</p>
+                    <a href="#" class="btn btn-lg btn-success">
+                       Search Destinations
+                    </a>
+                </div>
+            </div>
+            <!--Slide 3-->
+            <div class="carousel-item">
+                <img src="imgs/banner (3).jpg" class="d-flex flex-wrap align-items-center w-100">
+                <div class="carousel-caption d-block">
+                    <h5>Kick Back.</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita corporis ab pariatur, unde incidunt quasi placeat nesciunt molestias beatae? Beatae voluptatem ad tempore ea corrupti aut nulla debitis itaque consequuntur.</p>
+                    <a href="#" class="btn btn-lg btn-success">
+                        Search Destinations
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--Next and Prev Buttons-->
+        <button class="carousel-control-prev" type="button" data-bs-target="#topCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#topCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </header>
+
+    <body>
+        <!--Galeri Foto-->
+        <div id="featured-gallery" class="gallery container text-center">
+            <h1 class="title text-center">Featured Photos</h1>
+            <hr>
+            <div class="row photorow">
+                <div class="col photocol">
+                    <img src="imgs/gallery (1).jpg" class="rounded mx-auto gallery-item">
+                </div>
+                <div class="col photocol">
+                    <img src="imgs/gallery (2).jpg" class="rounded mx-auto gallery-item">
+                </div>
+                <div class="col photocol">
+                    <img src="imgs/gallery (3).jpg" class="rounded mx-auto gallery-item">
+                </div>
+                <div class="col photocol">
+                    <img src="imgs/gallery (4).jpg" class="rounded mx-auto gallery-item">
+                </div>
+            </div>
+            <div class="row photorow">
+                <div class="col photocol">
+                    <img src="imgs/gallery (5).jpg" class="rounded mx-auto gallery-item">
+                </div>
+                <div class="col photocol">
+                    <img src="imgs/gallery (6).jpg" class="rounded mx-auto gallery-item">
+                </div>
+                <div class="col photocol">
+                    <img src="imgs/gallery (7).jpg" class="rounded mx-auto gallery-item">
+                </div>
+                <div class="col photocol">
+                    <img src="imgs/gallery (8).jpg" class="rounded mx-auto gallery-item">
+                </div>
+            </div>
+        </div>
+        
+        <!--Rubrik Artikel-->
+        <div id="featured-story" class="container story-container">
+            <h1 class="title text-center">Featured Stories</h1>
+            <hr> <!--Artikel 1-->
+            <div class="row text-end">
+                <div class="col-7 story-text">
+                    <h3>Spending Time in Nature</h3>
+                    <h4>on an Off-the-Grid Vacation</h4>
+                    <h5 class="story-author"><i>by Rizky Alifian</i></h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore natus odit vel dicta labore repellat magnam deleniti non ducimus omnis temporibus in consequuntur ullam, rerum sint, praesentium laboriosam! Consequatur, deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate hic id fugit consectetur molestias, nulla, aperiam corporis nam excepturi possimus laudantium porro quos quisquam numquam officiis, dolor veniam nostrum eos.</p>
+                    <a href="#" class="btn btn-lg btn-success mt-auto">
+                        Read More
+                    </a>
+                </div>
+                <div class="col-5">
+                    <img class="story-image rounded" src="imgs/Stories (3).jpg" alt="Off-the-Grid Vacation">
+                </div>
+            </div>
+
+            <hr> <!--Artikel 2-->
+
+            <div class="row">
+                <div class="col-5">
+                    <img class="story-image rounded" src="imgs/Stories (1).jpeg" alt="Searching for the Best Waterfall in East Java">
+                </div>
+                <div class="col-7 story-text">
+                    <h3>The 72-Hour Search</h3>
+                    <h4>for the Best Waterfall in East-Java</h4>
+                    <h5 class="story-author"><i>by Majin Sakuya</i></h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore natus odit vel dicta labore repellat magnam deleniti non ducimus omnis temporibus in consequuntur ullam, rerum sint, praesentium laboriosam! Consequatur, deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate hic id fugit consectetur molestias, nulla, aperiam corporis nam excepturi possimus laudantium porro quos quisquam numquam officiis, dolor veniam nostrum eos.</p>
+                    <a href="#" class="btn btn-lg btn-success mt-auto">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <hr><!--Artikel 3-->
+
+            <div class="row text-end">
+                <div class="col-7 story-text">
+                    <h3>Going Sightseeing</h3>
+                    <h4>on the Most Beautiful Trails in Indonesia</h4>
+                    <h5 class="story-author"><i>by Anais Pirena M.</i></h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore natus odit vel dicta labore repellat magnam deleniti non ducimus omnis temporibus in consequuntur ullam, rerum sint, praesentium laboriosam! Consequatur, deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate hic id fugit consectetur molestias, nulla, aperiam corporis nam excepturi possimus laudantium porro quos quisquam numquam officiis, dolor veniam nostrum eos.</p>
+                    <a href="#" class="btn btn-lg btn-success mt-auto">
+                        Read More
+                    </a>
+                </div>
+                <div class="col-5">
+                    <img class="story-image rounded" src="imgs/Stories (2).jpg" alt="Searching for the Best Waterfall in East Java">
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!--Artikel Lainnya-->
+        <h5 class="title" style="margin-left: 3vh">More Articles</h5>
+=       <!--Memuat Card Carousel-->
+        <div id="storiesCardCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!--Slide 1-->
+                <div class="carousel-item active">
+                    <div class="d-flex align-items-center">
+                        <!--Card 1-->
+                        <div class="card">
+                            <div class="img-wrapper"><img src="imgs/indonesia.png" class="d-block w-100" alt="Indonesia"> </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Top 10 Places to go in Indonesia</h5>
+                                <p class="card-text d-sm-none d-md-block text-truncate">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero tempore blanditiis vero commodi voluptatibus, voluptatum, amet perferendis reprehenderit eligendi dicta minus expedita deleniti ducimus, qui harum. Architecto quos cupiditate ea?</p>
+                                <a href="#" class="btn btn-success">Read More</a>
+                            </div>
+                        </div>
+                        <!--Card 2-->
+                        <div class="card">
+                            <div class="img-wrapper"><img src="imgs/backpacking.png" class="d-block w-100" alt="Backpacking"> </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Things you Need Most when Backpacking</h5>
+                                <p class="card-text d-sm-none d-md-block text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas libero veritatis, excepturi non laboriosam praesentium! Quasi dignissimos nobis aut beatae, sint voluptatibus ipsam nostrum ut ex. Minima, numquam iure?</p>
+                                <a href="#" class="btn btn-success">Read More</a>
+                            </div>
+                        </div>
+                        <!--Card 3-->
+                        <div class="card">
+                            <div class="img-wrapper"><img src="imgs/bali.png" class="d-block w-100" alt="Bali"> </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Top 5 Hidden Gems in Bali</h5>
+                                <p class="card-text d-sm-none d-md-block text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat beatae autem fugiat dolorum fugit quod veniam maxime, architecto nulla repudiandae neque quam quos, voluptates eveniet eligendi tempora id nisi aperiam?</p>
+                                <a href="#" class="btn btn-success">Read More</a>
+                            </div>
+                        </div>
+                        <!--Card 4-->
+                        <div class="card">
+                            <div class="img-wrapper"><img src="imgs/lombok.png" class="d-block w-100" alt="Lombok"> </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Beautiful Places in Lombok</h5>
+                                <p class="card-text d-sm-none d-md-block text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, quis magni mollitia voluptate error ad, labore quae deserunt veritatis ullam suscipit nulla aspernatur quisquam accusamus, quibusdam perspiciatis fugit. Aut, cumque.</p>
+                                <a href="#" class="btn btn-success">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Slide 2-->
+                <div class="carousel-item">
+                    <div class="d-flex align-items-center">
+                        <!--Card 1-->
+                        <div class="card">
+                            <div class="img-wrapper"><img src="imgs/centraljava.png" class="d-block w-100" alt="Central Java"> </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Natural Tourist Spots in Central Java</h5>
+                                <p class="card-text d-sm-none d-md-block text-truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam laboriosam nemo aspernatur atque nulla? Unde, dolor! Consequatur consequuntur, voluptatum sed quo illum, voluptatem distinctio necessitatibus dignissimos voluptate sequi aspernatur eius.</p>
+                                <a href="#" class="btn btn-success">Read More</a>
+                            </div>
+                        </div>
+                        <!--Card 2-->
+                        <div class="card">
+                            <div class="img-wrapper"><img src="imgs/eastjava.png" class="d-block w-100" alt="East Java"> </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Best Places to Go on Hikes in East Java</h5>
+                                <p class="card-text d-sm-none d-md-block text-truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus voluptate molestiae dolorem modi, cupiditate, architecto, quas debitis odit totam facere corrupti. Similique in maiores repudiandae? Labore nihil possimus excepturi facilis..</p>
+                                <a href="#" class="btn btn-success">Read More</a>
+                            </div>
+                        </div>
+                        <!--Card 3-->
+                        <div class="card">
+                            <div class="img-wrapper"><img src="imgs/westjava.png" class="d-block w-100" alt="West Java"> </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Where to go in west java?</h5>
+                                <p class="card-text d-sm-none d-md-block text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laudantium earum ea voluptas iste veniam, quibusdam cum architecto ad delectus ex nostrum, soluta eos quos quaerat aliquid nam facere officiis.</p>
+                                <a href="#" class="btn btn-success">Read More</a>
+                            </div>
+                        </div>
+                        <!--Card 4-->
+                        <div class="card">
+                            <div class="img-wrapper"><img src="imgs/spelunking.png" class="d-block w-100" alt="Spelunking"> </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Gorgeous Cave Systems in Indonesia</h5>
+                                <p class="card-text d-sm-none d-md-block text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quidem totam eius? Officia voluptate cumque eaque culpa laborum odit est excepturi recusandae animi sequi. Praesentium fugit labore quam impedit minima!</p>
+                                <a href="#" class="btn btn-success">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Next and Prev Buttons-->
+            <button class="carousel-control-prev" type="button" data-bs-target="#storiesCardCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#storiesCardCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        
+    <!--Bootstrap-->
+    <script
+    src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+    <script 
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" 
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" 
+    crossorigin="anonymous"></script>
+    <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" 
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" 
+    crossorigin="anonymous"></script>
+
+    </body>
+
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col text-sm-start">
+                    <h5 id="contact">The EcoTourist Travelogue</h5>
+                    <p>is a blog that records all things related to
+                    Eco-Tourism and delivers them to those who
+                    are in search of their next Natural Tourism Destination</p>
+                </div>
+                <div class="col text-sm-center mt-2">
+                    <img class="w-50" src="imgs/ecotourist-white.png" alt="The Ecotourist Travelogue">
+                    <h5 class="newsletter">Sign up for our Newsletter!</h5>
+                    <a href="#" class="btn btn-success">Click Here!</a>
+                </div>
+                <div class="col text-sm-end">
+                    <h5 id="contact">contact us:</h5>
+                    <p>+62-822-4598-9502</p>
+                    <p>theecotourist@gmail.com</p>
+                    <p>ecotourist.travelogue</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</html>
