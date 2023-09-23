@@ -2,7 +2,7 @@
 const calculate = require('./Calculate.js');
 
 //pemanggilan local module
-console.log(calculate.area(15))
-console.log(calculate.area(15, 20))
-console.log(calculate.circ(15))
-console.log(calculate.circ(15, 20))
+console.log(calculate.luas(15))
+console.log(calculate.luas(15, 20))
+console.log(calculate.keliling(15))
+console.log(calculate.keliling(15, 20))

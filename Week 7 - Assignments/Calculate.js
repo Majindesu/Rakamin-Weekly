@@ -1,4 +1,4 @@
 //Function menghitung luas persegi & persegi panjang
-exports.area = (areaLength, areaWidth = areaLength) => areaLength * areaWidth
+exports.luas = (sisiPanjang, sisiLebar = sisiPanjang) => sisiPanjang * sisiLebar
 //Function menghitung keliling persegi & pergsegi panjang
-exports.circ = (areaLength, areaWidth = areaLength) => (areaLength + areaWidth) * 2
+exports.keliling = (sisiPanjang, sisiLebar = sisiPanjang) => (sisiPanjang + sisiLebar) * 2
