@@ -1,0 +1,322 @@
+body,html {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #EFEFEF;
+}
+
+/*Default Display*/
+.navbar {
+    background-color: #609966;
+    padding: 0px 50px;
+}
+
+.dropdown-container {
+    position: relative;
+  }
+  
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Bottom of button */
+    right: 0;
+/* More to the left */
+  }
+
+.justify{
+    text-align:justify;
+}
+
+#topCarousel .carousel{
+    max-height: 75vh;
+}
+
+#topCarousel .carousel-item img {
+    margin-top: -100px; /* Adjust this value as needed */
+    position: relative;
+    height:75vh;
+    object-fit: cover;
+  }
+
+#topCarousel .carousel-caption {
+    margin-bottom: 50px;
+}
+
+#topCarousel .carousel-caption h5{
+    font-weight: 700;
+    font-size: 25px;
+}
+#topCarousel .carousel-caption p{
+    font-size: 16px;
+}
+
+.title{
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.gallery {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 90vh;
+    max-height: auto;
+}
+
+.gallery-item {
+    margin: 20px;
+    position: relative;
+    max-height: 200px;
+    max-width: 200px;
+    height:100%;
+    width:100%;
+    object-fit: cover;
+  }
+
+footer {
+    margin-top: 50px;
+    padding: 25px;
+    color:#ffffff;
+    background-color:#2a3f2b;
+  }
+
+footer h5{
+    margin-bottom: 10px;
+}
+footer p{
+    margin-bottom: 0px;
+}
+
+.story-image {
+    margin-top: 10px;
+    position: relative;
+    max-height: 600px;
+    max-width: 800px;
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.story-text {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.story-author {
+    color:#696969;
+    font-weight: 300;
+}
+
+
+#storiesCardCarousel .card-img-top {
+    max-width: 100%;
+    height: auto;
+}
+
+
+#storiesCardCarousel .card-body {
+    padding: 1rem;
+    min-height:200px;
+    max-height:200px;
+}
+
+#storiesCardCarousel .carousel-inner .carousel-item .card {
+    width: 25vh; 
+}
+
+.card p{
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+#storiesCardCarousel .btn {
+    position: absolute; 
+    bottom:10px; 
+    margin:0 auto; 
+}
+
+
+.carousel-inner .carousel-item .d-flex {
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-inner .carousel-item .card {
+    width: calc(100% / 3); 
+    margin-right: 15px; 
+}
+
+.carousel-inner .carousel-item .card:last-child {
+    margin-right: 0;
+}
+
+h5.newsletter{
+    margin-top: 15px;
+}
+
+/*Mobile Display*/
+
+@media (max-width: 767px) {
+
+.navbar {
+    background-color: #2c2c2c;
+    padding: 10px 15px;
+}
+
+.dropdown-container {
+    position: relative;
+  }
+  
+.dropdown-menu {
+    position: absolute;
+    top: 100%; 
+    right: 0;
+
+  }
+
+#topCarousel .carousel{
+    max-height: 75vh;
+}
+
+#topCarousel .carousel-item img {
+    margin-top: -100px;
+    position: relative;
+    height:75vh;
+    object-fit: cover;
+    }
+
+#topCarousel .carousel-caption {
+        margin-bottom: 15px;
+    }
+
+#topCarousel .carousel-caption h5 {
+        font-size: 16px;
+        font-weight: 600; 
+    }
+
+#topCarousel .carousel-caption p {
+        font-size: 12px; 
+    }
+
+.btn {
+        font-size: 12px;
+}
+
+.title{
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.gallery {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 90vh;
+    max-height: auto;
+}
+
+.gallery-item {
+    margin: 10px;
+    position: relative;
+    max-height: 100px;
+    max-width: 100px;
+    height:100%;
+    width:100%;
+    object-fit: cover;
+  }
+
+footer {
+    margin-top: 50px;
+    padding: 25px;
+    color:#ffffff;
+    background-color:#2a3f2b;
+  }
+
+footer h5{
+    margin-bottom: 10px;
+}
+footer p{
+    margin-bottom: 0px;
+}
+
+.story-image {
+    display: block;
+    margin-top: 10px;
+    position: relative;
+    max-height: 600px;
+    max-width: 800px;
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.story-text{
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.story-text h5{
+    font-size: 16px;
+}
+.story-text p{
+    font-size: 12px;
+}
+
+.story-author {
+    color:#696969;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+#storiesCardCarousel .card-img-top {
+    max-width: 100%;
+    height: auto;
+}
+
+
+#storiesCardCarousel .card-body {
+    padding: 0.5rem;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+#storiesCardCarousel .carousel-inner .carousel-item .card {
+    width: 25vh; 
+}
+
+.carousel-inner .carousel-item .d-flex {
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-inner .carousel-item .card {
+    width: 10px; 
+    margin-right: 5px; 
+}
+
+.carousel-inner .carousel-item .card .card-title{
+    font-size: 10px;
+}
+
+.carousel-inner .carousel-item .card .card-text{
+    visibility: hidden;
+}
+
+.carousel-inner .carousel-item .card .btn{
+    font-size: 10px;
+}
+
+h5.newsletter{
+    margin-top: 15px;
+}
+
+footer 
+
+footer h5{
+    font-size: 12px;
+}
+
+footer p{
+    font-size: 10px;
+    padding-bottom:10px;
+}
+
+}
