@@ -1,0 +1,279 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Rakamin",
+    "contact": {},
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/users/register": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Register",
+        "operationId": "Register",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/RegisterRequest"
+                  },
+                  {
+                    "example": {
+                      "email": "mradmin@ecoroute.co.id",
+                      "gender": "Non-Binary",
+                      "password": "akuadalahadmin",
+                      "role": "admin"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "email": "mradmin@ecoroute.co.id",
+                "gender": "Non-Binary",
+                "password": "akuadalahadmin",
+                "role": "admin"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/users/login": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Login",
+        "operationId": "Login",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/LoginRequest"
+                  },
+                  {
+                    "example": {
+                      "email": "mradmin@ecoroute.co.id",
+                      "password": "akuadalahadmin"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "email": "mradmin@ecoroute.co.id",
+                "password": "akuadalahadmin"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/movies": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Movie List",
+        "operationId": "MovieList",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "delete": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Delete Movie",
+        "operationId": "DeleteMovie",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "security": []
+      },
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Add Movie",
+        "operationId": "AddMovie",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/AddMovieRequest"
+                  },
+                  {
+                    "example": {
+                      "title": "placeholdertitle",
+                      "genre": "placeholdergenre",
+                      "year": "placeholderyear"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "title": "placeholdertitle",
+                "genre": "placeholdergenre",
+                "year": "placeholderyear"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "RegisterRequest": {
+        "title": "RegisterRequest",
+        "required": [
+          "email",
+          "gender",
+          "password",
+          "role"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "email": "mradmin@ecoroute.co.id",
+          "gender": "Non-Binary",
+          "password": "akuadalahadmin",
+          "role": "admin"
+        }
+      },
+      "LoginRequest": {
+        "title": "LoginRequest",
+        "required": [
+          "email",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "email": "mradmin@ecoroute.co.id",
+          "password": "akuadalahadmin"
+        }
+      },
+      "DeleteMovieRequest": {
+        "title": "DeleteMovieRequest",
+        "required": [
+          "id"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "id": "1"
+        }
+      },
+      "AddMovieRequest": {
+        "title": "AddMovieRequest",
+        "required": [
+          "title",
+          "genre",
+          "year"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "genre": {
+            "type": "string"
+          },
+          "year": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "title": "placeholdertitle",
+          "genre": "placeholdergenre",
+          "year": "placeholderyear"
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Misc",
+      "description": ""
+    }
+  ]
+}
