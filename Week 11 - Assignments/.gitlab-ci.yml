@@ -1,0 +1,15 @@
+stages:
+  - test
+  - deploy
+
+test:
+  stage: test
+  script:
+    - npm install
+    - npm test
+
+deploy:
+  stage: deploy
+  script:
+    - docker build -t my-api .
+    - docker-compose up -d
